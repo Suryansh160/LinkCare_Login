@@ -52,10 +52,21 @@ class SignIn extends StatelessWidget {
               SizedBox(
                 height: 150,
               ),
-              Text(
-                textAlign: TextAlign.start,
-                'Lets Sign you in',
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              RichText(
+                text: TextSpan(
+                  style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black), // Default style
+                  children: [
+                    TextSpan(text: "Let's "),
+                    TextSpan(
+                      text: "Sign",
+                      style: TextStyle(color: Colors.blue), // "Sign" in red
+                    ),
+                    TextSpan(text: " you in"),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -64,7 +75,7 @@ class SignIn extends StatelessWidget {
                 width: 300,
                 child: Text(
                   'Welcome Back,You have been missed',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                 ),
               ),
               SizedBox(

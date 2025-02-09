@@ -49,10 +49,20 @@ class Register extends StatelessWidget {
                 SizedBox(
                   height: 150,
                 ),
-                Text(
-                  textAlign: TextAlign.start,
-                  'Lets Register Account',
-                  style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                RichText(
+                  text: TextSpan(
+                    style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                    children: [
+                      TextSpan(text: 'Lets '),
+                      TextSpan(
+                          text: 'Register ',
+                          style: TextStyle(color: Colors.blue)),
+                      TextSpan(text: 'your account'),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 15,
@@ -61,7 +71,7 @@ class Register extends StatelessWidget {
                   width: 300,
                   child: Text(
                     'Hello user, you have a greatful journey',
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
                   ),
                 ),
                 SizedBox(
